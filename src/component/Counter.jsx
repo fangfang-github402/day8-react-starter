@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './Counter.css'
 
 export default function Counter(props) {
     const [count, setCount] = useState(0);
@@ -13,7 +14,7 @@ export default function Counter(props) {
         props.updateSum(1)
     }
 
-    return (<div>
+    return (<div className={"counter"}>
             <button onClick={increase}>
                 +
             </button>
