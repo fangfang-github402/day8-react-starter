@@ -14,10 +14,10 @@ const CounterGroup = (props) => {
     }
 
     return (<div>
-            <span>sum:{sum}</span>
-            {counters.map((randomId, index) => {
-                return <Counter key={randomId + index} updateSum={handleSum}/>
-            })}
-        </div>)
+        <span>sum:{sum}</span>
+        {counters.map((randomId, index) => {
+            return <Counter key={randomId + index} updateSum={handleSum}/>
+        })}
+    </div>)
 }
 export default CounterGroup;

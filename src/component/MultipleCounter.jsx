@@ -9,8 +9,8 @@ const MultipleCounter = () => {
         setSize(size)
     }
     return (<div>
-            <CounterGroupGenerator changeSize={handleSize}/>
-            <CounterGroup size={size}/>
-        </div>)
+        <CounterGroupGenerator changeSize={handleSize}/>
+        <CounterGroup size={size}/>
+    </div>)
 }
 export default MultipleCounter;

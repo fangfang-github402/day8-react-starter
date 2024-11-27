@@ -11,7 +11,7 @@ export default function Counter(props) {
 
     function increase() {
         setCount(count + 1);
-        props.updateSum(1)
+        props.updateSum(1);
     }
 
     return (<div className={"counter"}>
