@@ -1,15 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Counter from "./component/CounterPractice";
+import MultipleCounter from "./component/MultipleCounter";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <Counter/>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <MultipleCounter/>
+        </div>
+    );
 }
 
 export default App;

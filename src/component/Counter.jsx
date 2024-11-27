@@ -7,7 +7,7 @@ export default function Counter() {
         setCount(count - 1);
     }
 
-    function increase(){
+    function increase() {
         setCount(count + 1);
     }
 
