@@ -2,14 +2,10 @@ import {useState} from "react";
 
 const CounterGroupGenerator = (props) => {
     const [size, setSize] = useState(0);
+
     const handleChange = (event) => {
-        if (event.target.value < 0) {
-            setSize(0);
-        } else if (event.target.value > 20) {
-            setSize(20);
-        } else {
-            setSize(event.target.value);
-        }
+        const value = Math.max(0, Math.min(20, parseInt(event.target.value, 10) || 0));
+        setSize(value);
     }
 
     function handleReset() {
