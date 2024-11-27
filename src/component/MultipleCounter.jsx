@@ -4,11 +4,13 @@ import CounterGroup from "./CounterGroup";
 
 const MultipleCounter = () => {
     const [size, setSize] = useState(0);
-    return (
-        <div>
-            <CounterGroupGenerator setSize={setSize}/>
+
+    const handleSize = (size) => {
+        setSize(size)
+    }
+    return (<div>
+            <CounterGroupGenerator changeSize={handleSize}/>
             <CounterGroup size={size}/>
-        </div>
-    )
+        </div>)
 }
 export default MultipleCounter;

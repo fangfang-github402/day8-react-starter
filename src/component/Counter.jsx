@@ -1,18 +1,19 @@
 import {useState} from 'react';
 
-export default function Counter() {
+export default function Counter(props) {
     const [count, setCount] = useState(0);
 
     function decrease() {
         setCount(count - 1);
+        props.updateSum(-1);
     }
 
     function increase() {
         setCount(count + 1);
+        props.updateSum(1)
     }
 
-    return (
-        <div>
+    return (<div>
             <button onClick={increase}>
                 +
             </button>
@@ -20,6 +21,5 @@ export default function Counter() {
             <button onClick={decrease}>
                 -
             </button>
-        </div>
-    );
+        </div>);
 }

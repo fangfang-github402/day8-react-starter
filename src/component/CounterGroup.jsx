@@ -1,14 +1,23 @@
 import Counter from "./Counter";
-import {useState} from "react";
+import {useMemo, useState} from "react";
 
 const CounterGroup = (props) => {
-    const array = Array.from({length: props.size});
-    return (
-        <div>
-            {array.map((_, index) => {
-                return <Counter key={index + Math.random()}/>
+    const [sum, setSum] = useState(0);
+
+    const counters = useMemo(() => {
+        setSum(0);
+        return new Array(parseInt(props.size)).fill(Math.random())
+    }, [props.size])
+
+    const handleSum = (number) => {
+        setSum(sum + number);
+    }
+
+    return (<div>
+            <span>sum:{sum}</span>
+            {counters.map((randomId, index) => {
+                return <Counter key={randomId + index} updateSum={handleSum}/>
             })}
-        </div>
-    )
+        </div>)
 }
 export default CounterGroup;

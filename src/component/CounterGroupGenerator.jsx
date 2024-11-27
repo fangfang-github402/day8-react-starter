@@ -13,15 +13,13 @@ const CounterGroupGenerator = (props) => {
     }
 
     function handleReset() {
-        props.setSize(size);
+        props.changeSize(size);
     }
 
-    return (
-        <div>
+    return (<div>
             <span>Size:</span>
             <input min={0} max={20} type="number" value={size} onChange={handleChange}/>
             <button onClick={handleReset}>reset</button>
-        </div>
-    );
+        </div>);
 }
 export default CounterGroupGenerator;
