@@ -1,0 +1,9 @@
+.product-item-wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.out-of-stock {
+    color: coral;
+}
